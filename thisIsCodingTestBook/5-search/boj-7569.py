@@ -28,7 +28,7 @@ def bfs():
         for i in range(6):   
             nx,ny,nz=x+dx[i],y+dy[i],z+dz[i]  
             if (0<=nx<n and 0<=ny<m and 0<=nz<h) and graph[nz][nx][ny] == 0:
-                graph[nz][nx][ny]=graph[z][x][y]+1  
+                graph[nz][nx][ny]=graph[z][x][y]+1  #1로 팅하는게 아니라 +1을 해서 횟수를 저장
                 next.append((nz,nx,ny))  
   
 bfs()
@@ -42,8 +42,7 @@ for z in range(h):
       if graph[z][x][y]==0:
         flag = False
       else:
-        print(result, graph[z][x][y])
-        result = max(result,graph[z][x][y])
+        result = max(result,graph[z][x][y]) #여기서 제일 큰 횟수 찾기
 
 
 if flag == True:
