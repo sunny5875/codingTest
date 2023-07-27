@@ -14,4 +14,4 @@ for k in range(n):
                 graph[a][b] = 1
 
 for g in graph:
-    print(*g)
+    print(*g) #이차원 배열을 쉽게 [] 없이 예쁘게 출력하는 방법
